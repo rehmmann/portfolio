@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Cards from "./Cards";
-import { Container,Divider, Typography } from "@material-ui/core";
+import { Button, Container, Divider, Typography } from "@material-ui/core";
+import { blue } from "@material-ui/core/colors";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -14,20 +15,32 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     width: "100%",
-    overflow: "hidden",
-
-    // backgroundColor: "#4a41cd",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: 'space-around'
   },
   img: {
     position: "relative",
     top: 30,
     // marginRight:'auto',
-
     // marginLeft: "auto",
     paddingBottom: 50,
     borderRadius: "30%",
     maxHeight: "50rem",
-    width: "70%",
+    width: "60%",
+  },
+  button: {
+    borderRadius:30,
+    width: 200,
+    height: 45,
+    // marginLeft: 5,
+    backgroundColor: "#000C66",
+    color: "#fff",
+    "&:hover": {
+      backgroundColor: "#000C66",
+      color: "#fff",
+    },
   },
   paper: {
     padding: theme.spacing(1),
@@ -83,15 +96,21 @@ export default function NestedGrid() {
           alt="Italian Trulli"
           className={classes.img}
         />
+        <Button
+          className={classes.button}
+          href="https://drive.google.com/file/d/1qoYI5mHx-zi_UOif4lKNmwNFS_YlVBd5/view?usp=sharing"
+        >
+          View Resume
+        </Button>
       </Container>
-      <Divider variant='middle' />
-      <Typography variant='h6' align='center'>
+
+      <Divider variant="middle" />
+      <Typography variant="h6" align="center">
         Modules
       </Typography>
       <Container>
-        
         <Grid container spacing={2}>
-          <Grid container  spacing={3}>
+          <Grid container spacing={3}>
             <FormRow />
           </Grid>
           {/* <Grid container item xs={12} spacing={3}>

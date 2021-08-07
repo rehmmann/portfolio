@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { createTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+import { purple, red, blueGrey, blue } from "@material-ui/core/colors";
+import "./App.css";
+import Cards from "./Components/Cards";
+import React from "react";
+import Header from "./Components/Header";
+import Grid from "./Components/Grid";
+import { Height } from "@material-ui/icons";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
-function App() {
+export default function App() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  const theme = createTheme({
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: blue[900],
+      },
+      secondary: {
+        // This is green.A700 as hex.
+        main: "#1d7efc",
+      },
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <Header />
+      </ThemeProvider>
+
+      <Grid />
+      <Projects/>
+      <Contact/>
+    </>
   );
 }
-
-export default App;

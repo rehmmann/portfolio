@@ -55,7 +55,7 @@ export default function NestedGrid() {
   function FormRow(props) {
     return (
       <>
-        <Grid item xs={6} lg={4}>
+        <Grid item xs={12} lg={4}>
           <Cards
             title="CS2040S"
             name="Data Structure & Algo"
@@ -63,7 +63,7 @@ export default function NestedGrid() {
             url="https://nusmods.com/modules/CS2040S/data-structures-and-algorithms"
           />
         </Grid>
-        <Grid item xs={6} lg={4}>
+        <Grid item xs={12} lg={4}>
           <Cards
             title="CS2030S"
             name="Programming Methodolgy II"
@@ -71,7 +71,7 @@ export default function NestedGrid() {
             url="https://nusmods.com/modules/CS2030S/programming-methodology-ii"
           />
         </Grid>
-        <Grid item xs={6} lg={4}>
+        <Grid item xs={12} lg={4}>
           <Cards
             title="CS2103"
             name="Software Engineering"

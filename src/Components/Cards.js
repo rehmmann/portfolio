@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     borderRadius: 15,
     backgroundColor: "#FFAEBC",
     // display:'block'
-    // backgroundImage:'../public/Cycling_pic.jpg'
+   
   },
   bullet: {
     display: "inline-block",

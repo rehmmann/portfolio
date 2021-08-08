@@ -1,15 +1,16 @@
-import { Divider ,Typography} from '@material-ui/core'
-import React from 'react'
+import { Divider, Typography } from "@material-ui/core";
+import React from "react";
 
 function Projects() {
-    return (
-        <div>
-         <Divider variant='middle'/>
-         <Typography variant='h6' align='center'>
+  return (
+    <div>
+      <Divider variant="middle" />
+      <Typography id='Projects' variant="h5" align="center">
         Projects
       </Typography>
-        </div>
-    )
+      
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;

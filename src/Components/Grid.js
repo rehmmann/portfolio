@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Cards from "./Cards";
 import { Button, Container, Divider, Typography } from "@material-ui/core";
 import { blue } from "@material-ui/core/colors";
+// import Image from '../Cycling_pic.jpg';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -18,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    // backgroundImage: `url(${Image})`
+    // background:'linear-gradient(#050534, #0c0c4f)'
   },
   img: {
     position: "relative",
@@ -89,7 +92,7 @@ export default function NestedGrid() {
   }
 
   return (
-    <div className={classes.root}>
+    <div id='About Me' className={classes.root}>
       <Container className={classes.container}>
         <img
           src="Cycling_pic.jpg"
@@ -105,7 +108,7 @@ export default function NestedGrid() {
       </Container>
 
       <Divider variant="middle" />
-      <Typography variant="h6" align="center">
+      <Typography id='Modules' variant="h5" align="center">
         Modules
       </Typography>
       <Container>

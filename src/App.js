@@ -6,7 +6,6 @@ import Cards from "./Components/Cards";
 import React from "react";
 import Header from "./Components/Header";
 import Grid from "./Components/Grid";
-import { Height } from "@material-ui/icons";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 

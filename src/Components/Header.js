@@ -59,6 +59,20 @@ const useStyles = makeStyles(() => ({
 export default function Header() {
   const { header, logo, menuButton, toolbar } = useStyles(); //destructuring
 
+  const test=(label)=>{
+    if(label == 'Modules'){
+    document.getElementById('Modules').scrollIntoView({behavior:'smooth'})
+    }
+    if(label == 'Projects'){
+      document.getElementById('Projects').scrollIntoView({behavior:'smooth'})
+      }
+    if(label == 'Contact Me'){
+      document.getElementById('Contact').scrollIntoView({behavior:'smooth'})
+      }
+    if(label == 'About Me'){
+      document.getElementById('About Me').scrollIntoView({behavior:'smooth'})
+      }
+}
   const displayDesktop = () => {
     return (
       <Toolbar
@@ -71,7 +85,8 @@ export default function Header() {
         </IconButton> */}
         {welcomeLogo}
 
-        <div>{getMenuButtons()}</div>
+        <div>{getMenuButtons()}
+        </div>
         <Divider />
       </Toolbar>
     );
@@ -87,14 +102,14 @@ export default function Header() {
     return headersData.map(({ label, href }) => {
       return (
         <BrowserRouter>
-          <Button
-            {...{
-              key: label,
-              color: "inherit",
-              to: href,
-              component: RouterLink,
-              className: menuButton,
-            }}
+          <Button onClick={() => {test(label);}}
+            // {...{
+            //   key: label,
+              color= "inherit"
+            //   to: href,
+            //   component: RouterLink,
+            //   className: menuButton,
+            // }}
           >
             {label}
           </Button>

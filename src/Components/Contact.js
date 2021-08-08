@@ -117,7 +117,7 @@ function Contact() {
             type="submit"
             value="Send"
           >
-            Submit
+            Send
           </Button>
         </form>
       </div>

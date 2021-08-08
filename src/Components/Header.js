@@ -15,6 +15,10 @@ import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 
 const headersData = [
   {
+    label: "About Me",
+    href: "/account",
+  },
+  {
     label: "Modules",
     href: "/listings",
   },
@@ -22,10 +26,7 @@ const headersData = [
     label: "Projects",
     href: "/mentors",
   },
-  {
-    label: "About Me",
-    href: "/account",
-  },
+  
   {
     label: "Contact Me",
     href: "/logout",
@@ -37,22 +38,30 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "#000C66",
     paddingRight: "79px",
     paddingLeft: "118px",
+    
   },
   logo: {
     fontFamily: "Work Sans, sans-serif",
     fontWeight: 600,
     // color: "#FFFEFE",
     textAlign: "left",
+    display: "flex",
+    flex:1,
+    
   },
   menuButton: {
     fontFamily: "Open Sans, sans-serif",
     fontWeight: 700,
     size: "18px",
     marginRight: "38px",
+    
   },
   toolbar: {
     display: "flex",
-    justifyContent: "space-between",
+    flex:5,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    
   },
 }));
 //menu buttons are modules/projects ...

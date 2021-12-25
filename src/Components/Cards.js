@@ -9,11 +9,11 @@ import { BrowserRouter, Link as RouterLink } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    marginTop: 75,
-    marginBottom: 15,
+    marginTop: 40,
+    marginBottom: 30,
     height: 270,
     borderRadius: 15,
-    backgroundColor: "#FFAEBC",
+    backgroundColor: "#5e60ce",
     // display:'block'
    
   },
@@ -43,7 +43,7 @@ export default function SimpleCard(props) {
 
   return (
     <div>
-      <Card raised={true} className={classes.root}>
+      <Card raised={true} className={classes.root} >
         <CardContent>
           <Typography
             className={classes.title}

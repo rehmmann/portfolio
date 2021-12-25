@@ -7,10 +7,9 @@ import {
   Typography,
   Button,
 } from "@material-ui/core";
-// import Image from '../Cycling_pic.jpg';
 
 const useStyles = makeStyles({
-  title:{
+  title: {
     color: "#FFFFFF",
   },
   container: {
@@ -19,10 +18,10 @@ const useStyles = makeStyles({
     padding: "5%",
     // color: "#FFAEBC",
     // backgroundImage: `url(${Image})`
-    background: "linear-gradient(#090969, #12125c)",
+    background: "#0d2c5a",
   },
   field: {
-    width:'70%',
+    width: "70%",
     // borderRadius: 15,
     display: "flex",
     // color: "#FFAEBC",
@@ -37,10 +36,10 @@ const useStyles = makeStyles({
     // marginLeft: "3%",
     // marginTop:'3%',
     // backgroundColor: "#FFFFFF",
-    // "&:hover": {
-    //   backgroundColor: "#000C66",
-    //   color: "#fff",
-    // },
+    "&:hover": {
+      backgroundColor: "#0d2c5a",
+      color: "#fff",
+    },
   },
 });
 
@@ -70,13 +69,13 @@ function Contact() {
   }
 
   return (
-    <div id='Contact'>
+    <div id="Contact">
       <Divider variant="middle" />
-      
+
       <div className={classes.container}>
-      <Typography className={classes.title} variant="h5" align="center">
-        Contact Me
-      </Typography>
+        <Typography className={classes.title} variant="h5" align="center">
+          Contact Me
+        </Typography>
         <form className="contact-form" onSubmit={sendEmail}>
           {/* <input type="number" name="contact_number" /> */}
           {/* <label>Name</label> */}
@@ -97,9 +96,7 @@ function Contact() {
             className={classes.field}
             variant="filled"
           />
-          {/* <input type="email" name="user_email" /> */}
-          {/* <label>Message</label> */}
-          {/* <textarea name="message" /> */}
+
           <TextField
             multiline
             name="message"
@@ -111,8 +108,8 @@ function Contact() {
           />
           {/* <input type="submit" value="Send" /> */}
           <Button
-          size='large'
-          variant='contained'
+            size="large"
+            variant="contained"
             className={classes.button}
             type="submit"
             value="Send"

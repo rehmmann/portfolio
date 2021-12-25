@@ -3,52 +3,62 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Cards from "./Cards";
-import { Button, Container, Divider, Typography } from "@material-ui/core";
+import "typeface-roboto";
+import {
+  Avatar,
+  Button,
+  Container,
+  Divider,
+  Typography,
+} from "@material-ui/core";
 import { blue } from "@material-ui/core/colors";
-// import Image from '../Cycling_pic.jpg';
+import Image from "../greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // display:'block'
+    fontFamily: "typeface-roboto",
+    marginTop: "20px",
   },
   parent: {
     // display:'inside'
   },
   container: {
+    backgroundSize: "cover",
+    height: "200px",
     width: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: 'space-around',
-    // backgroundImage: `url(${Image})`
-    // background:'linear-gradient(#050534, #0c0c4f)'
+    justifyContent: "space-around",
+    backgroundPosition: "center",
+    // backgroundImage: 'linear-gradient(to right top, #0b1c34, #171526, #180d1a, #11060d, #000000)'
   },
   img: {
     position: "relative",
-    top: 30,
-    // marginRight:'auto',
-    // marginLeft: "auto",
-    paddingBottom: 50,
-    borderRadius: "30%",
-    maxHeight: "50rem",
-    width: "60%",
+    top: 40,
+    borderRadius: "25%",
+    // maxHeight: "20rem",
+    width: theme.spacing(30),
+    height: theme.spacing(40),
+  },
+  headerText: {
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: 700,
+  },
+  bodyText: {
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: 100,
   },
   button: {
-    borderRadius:30,
+    borderRadius: 30,
     width: 200,
     height: 45,
-    // marginLeft: 5,
     backgroundColor: "#000C66",
     color: "#fff",
     "&:hover": {
-      backgroundColor: "#000C66",
+      backgroundColor: "#000",
       color: "#fff",
     },
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
   },
 }));
 
@@ -82,23 +92,33 @@ export default function NestedGrid() {
             url="https://nusmods.com/modules/CS2103/software-engineering"
           />
         </Grid>
-        {/* <Grid item xs={4}>
-          <Paper elevation={5} className={classes.paper}>
-            item
-          </Paper>
-        </Grid> */}
       </>
     );
   }
 
   return (
-    <div id='About Me' className={classes.root}>
+    <div id="About Me" className={classes.root}>
+      <Typography
+        className={classes.headerText}
+        id="Modules"
+        variant="h5"
+        align="center"
+      >
+        About Myself
+      </Typography>
       <Container className={classes.container}>
-        <img
-          src="Cycling_pic.jpg"
-          alt="Italian Trulli"
-          className={classes.img}
-        />
+        <Avatar src="Cycling_pic.png" className={classes.img} />
+        <Typography
+          align="center"
+          className={classes.bodyText}
+          variant="subtitle1"
+          paragraph="true"
+        >
+          A Computer Science undergrad passionate about using technology to
+          solve problems faced by people.
+        </Typography>
+      </Container>
+      <Container className={classes.container}>
         <Button
           className={classes.button}
           href="https://drive.google.com/file/d/1qoYI5mHx-zi_UOif4lKNmwNFS_YlVBd5/view?usp=sharing"
@@ -107,8 +127,14 @@ export default function NestedGrid() {
         </Button>
       </Container>
 
+      {/* Code for Modules Section STARTS HERE */}
       <Divider variant="middle" />
-      <Typography id='Modules' variant="h5" align="center">
+      <Typography
+        id="Modules"
+        className={classes.headerText}
+        variant="h5"
+        align="center"
+      >
         Modules
       </Typography>
       <Container>
@@ -116,12 +142,6 @@ export default function NestedGrid() {
           <Grid container spacing={3}>
             <FormRow />
           </Grid>
-          {/* <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid> */}
         </Grid>
       </Container>
     </div>

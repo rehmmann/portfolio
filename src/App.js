@@ -5,7 +5,7 @@ import "./App.css";
 import Cards from "./Components/Cards";
 import React from "react";
 import Header from "./Components/Header";
-import Grid from "./Components/Grid";
+import Grid from "./Components/AboutMe";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 
@@ -34,8 +34,8 @@ export default function App() {
       </ThemeProvider>
 
       <Grid />
-      <Projects/>
-      <Contact/>
+      <Projects />
+      <Contact />
     </>
   );
 }

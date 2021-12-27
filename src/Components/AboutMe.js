@@ -17,29 +17,29 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     fontFamily: "typeface-roboto",
-    marginTop: "20px",
+    paddingTop: "20px",
+    backgroundColor: "  #000204  ",
+    color: "#fff",
   },
-  parent: {
-    // display:'inside'
+  bigContainer: {
+   
   },
   container: {
-    backgroundSize: "cover",
-    height: "200px",
-    width: "100%",
+    height: "180px",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
-    backgroundPosition: "center",
+    justifyContent: "center",
+
     // backgroundImage: 'linear-gradient(to right top, #0b1c34, #171526, #180d1a, #11060d, #000000)'
   },
   img: {
     position: "relative",
     top: 40,
-    borderRadius: "25%",
+    borderRadius: "50%",
     // maxHeight: "20rem",
-    width: theme.spacing(30),
-    height: theme.spacing(40),
+    width: theme.spacing(25),
+    height: theme.spacing(25),
   },
   headerText: {
     fontFamily: "Open Sans, sans-serif",
@@ -48,17 +48,26 @@ const useStyles = makeStyles((theme) => ({
   bodyText: {
     fontFamily: "Open Sans, sans-serif",
     fontWeight: 100,
+    width: 300,
+    paddingTop: 100,
+    paddingLeft: 20,
+    color: "#cacfd6",
   },
   button: {
-    borderRadius: 30,
-    width: 200,
+    borderRadius: 10,
+    width: 150,
     height: 45,
-    backgroundColor: "#000C66",
+    backgroundColor: "#FF5C5C",
     color: "#fff",
     "&:hover": {
       backgroundColor: "#000",
       color: "#fff",
     },
+  },
+  modulesContainer: {
+    backgroundColor: "#fff",
+    color: "#000",
+    width: "100%",
   },
 }));
 
@@ -98,52 +107,56 @@ export default function NestedGrid() {
 
   return (
     <div id="About Me" className={classes.root}>
-      <Typography
-        className={classes.headerText}
-        id="Modules"
-        variant="h5"
-        align="center"
-      >
-        About Myself
-      </Typography>
-      <Container className={classes.container}>
-        <Avatar src="Cycling_pic.png" className={classes.img} />
+      <Container className={classes.bigContainer}>
         <Typography
+          className={classes.headerText}
+          id="Modules"
+          variant="h5"
           align="center"
-          className={classes.bodyText}
-          variant="subtitle1"
-          paragraph="true"
         >
-          A Computer Science undergrad passionate about using technology to
-          solve problems faced by people.
+          About Myself
         </Typography>
-      </Container>
-      <Container className={classes.container}>
-        <Button
-          className={classes.button}
-          href="https://drive.google.com/file/d/1qoYI5mHx-zi_UOif4lKNmwNFS_YlVBd5/view?usp=sharing"
-        >
-          View Resume
-        </Button>
+        <Container className={classes.container}>
+          <Avatar src="Cycling_pic.png" className={classes.img} />
+          <Typography
+            align="center"
+            className={classes.bodyText}
+            variant="subtitle1"
+            paragraph="true"
+          >
+            A Computer Science undergrad passionate about using technology to
+            solve problems faced by people. Currently searching for an internship.
+          </Typography>
+        </Container>
+        <Container className={classes.container}>
+          <Button
+            className={classes.button}
+            href="https://drive.google.com/file/d/17i6T5cLB5h1Bz94XXVAHM8B839IeXGp7/view?usp=sharing"
+          >
+            View Resume
+          </Button>
+        </Container>
       </Container>
 
       {/* Code for Modules Section STARTS HERE */}
-      <Divider variant="middle" />
-      <Typography
-        id="Modules"
-        className={classes.headerText}
-        variant="h5"
-        align="center"
-      >
-        Modules
-      </Typography>
-      <Container>
-        <Grid container spacing={2}>
-          <Grid container spacing={3}>
-            <FormRow />
+      <div className={classes.modulesContainer}>
+        <Divider variant="middle" />
+        <Typography
+          id="Modules"
+          className={classes.headerText}
+          variant="h5"
+          align="center"
+        >
+          Modules
+        </Typography>
+        <Container>
+          <Grid container spacing={2}>
+            <Grid container spacing={3}>
+              <FormRow />
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 }

@@ -11,10 +11,11 @@ const useStyles = makeStyles({
     minWidth: 275,
     marginTop: 40,
     marginBottom: 30,
+    marginRight: 30,
     height: 270,
     borderRadius: 15,
-    backgroundColor: "#5e60ce",
-    // display:'block'
+    backgroundColor: "#cacfd6",
+    // justifyContent: "center"
    
   },
   bullet: {
@@ -25,13 +26,10 @@ const useStyles = makeStyles({
   title: {
     fontSize: 14,
   },
-  pos: {
-    marginBottom: 12,
-  },
   button: {
     // color: "#fff",
     "&:hover": {
-      backgroundColor: "#000C66",
+      backgroundColor: "#000",
       color: "#fff",
     },
   },
@@ -55,9 +53,6 @@ export default function SimpleCard(props) {
           <Typography variant="h5" component="h2">
             {props.name}
           </Typography>
-          {/* <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography> */}
           <Typography variant="body2" component="p">
             {props.details}
             <br />

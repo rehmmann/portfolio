@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     padding: "5%",
     // color: "#FFAEBC",
     // backgroundImage: `url(${Image})`
-    background: "#0d2c5a",
+    background: "#151515;",
   },
   field: {
     width: "70%",

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const useStyles = makeStyles({
+  root: { backgroundColor: "#ebeeee" },
   projects: {
     display: "flex",
     flexDirection: "row",
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
 function Projects() {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       <Divider variant="middle" />
       <Typography
         id="Projects"
@@ -82,7 +83,6 @@ function Projects() {
             // focusOnSelect={true}
           >
             <img alt="" height={300} src={"Union1.jpg"}></img>
-
           </Slider>
         </Container>
       </div>

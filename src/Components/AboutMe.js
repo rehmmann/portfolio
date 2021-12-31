@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Open Sans, sans-serif",
     fontWeight: 100,
     width: 300,
-    paddingTop: 100,
+    paddingTop: 90,
     paddingLeft: 20,
     color: "#cacfd6",
   },

@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import { blue } from "@material-ui/core/colors";
 import Image from "../greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
+import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -22,7 +23,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   bigContainer: {
-   
+    height: "180px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
   container: {
     height: "180px",
@@ -30,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-
+    marginInline: 90,
     // backgroundImage: 'linear-gradient(to right top, #0b1c34, #171526, #180d1a, #11060d, #000000)'
   },
   img: {
@@ -55,8 +60,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     borderRadius: 10,
-    width: 150,
+    width: 120,
     height: 45,
+    marginLeft: 20,
     backgroundColor: "#FF5C5C",
     color: "#fff",
     "&:hover": {
@@ -105,9 +111,13 @@ export default function NestedGrid() {
     );
   }
 
+  const hireMe = (label) => {
+    document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div id="About Me" className={classes.root}>
-      <Container className={classes.bigContainer}>
+      <Container>
         <Typography
           className={classes.headerText}
           id="Modules"
@@ -116,7 +126,7 @@ export default function NestedGrid() {
         >
           About Myself
         </Typography>
-        <Container className={classes.container}>
+        <Container className={classes.bigContainer}>
           <Avatar src="Cycling_pic.png" className={classes.img} />
           <Typography
             align="center"
@@ -125,15 +135,26 @@ export default function NestedGrid() {
             paragraph="true"
           >
             A Computer Science undergrad passionate about using technology to
-            solve problems faced by people. Currently searching for an internship.
+            solve problems faced by people. Currently searching for an
+            internship.
           </Typography>
         </Container>
         <Container className={classes.container}>
           <Button
+            size="small"
             className={classes.button}
             href="https://drive.google.com/file/d/17i6T5cLB5h1Bz94XXVAHM8B839IeXGp7/view?usp=sharing"
           >
             View Resume
+          </Button>
+          <Button
+            size="small"
+            className={classes.button}
+            onClick={() => {
+              hireMe();
+            }}
+          >
+            Hire Me
           </Button>
         </Container>
       </Container>

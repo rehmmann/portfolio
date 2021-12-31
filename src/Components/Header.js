@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { BrowserRouter, Link as RouterLink } from "react-router-dom";
-// import {MenuTwoToneIcon, GitHubIcon} from "@material-ui/icons/MenuTwoTone";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Image from "../greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
@@ -53,6 +52,7 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Work Sans",
     fontWeight: 700,
     fontSize: 50,
+    letterSpacing: 1.5,
     textAlign: "center",
     marginTop: 50,
   },
@@ -60,12 +60,13 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Open Sans",
     fontWeight: 700,
     fontSize: 18,
+    letterSpacing: 2,
     textAlign: "center",
     marginTop: 50,
   },
   icons: {
     marginTop: 10,
-    paddingLeft: 10,
+    paddingLeft: 15,
   },
   menuButton: {
     fontFamily: "sans-serif",

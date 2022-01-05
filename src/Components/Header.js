@@ -13,7 +13,7 @@ import {
 import React from "react";
 import { BrowserRouter, Link as RouterLink } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Image from "../greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
 const headersData = [
   {
@@ -84,7 +84,8 @@ const useStyles = makeStyles(() => ({
 }));
 //menu buttons are modules/projects ...
 export default function Header() {
-  const { header, container, name, titles, icons, menuButton, toolbar } = useStyles(); //destructuring
+  const { header, container, name, titles, icons, menuButton, toolbar } =
+    useStyles(); //destructuring
 
   const test = (label) => {
     if (label == "Modules") {
@@ -106,11 +107,11 @@ export default function Header() {
   };
   const displayDesktop = () => {
     const handleGitHubIcon = () => {
-      window.location.href = "https://github.com/rehmmann"
-   }
-   const handleLinkedInIcon = () => {
-    window.location.href = "https://linkedin.com/in/rehman-sajid"
- }
+      window.location.href = "https://github.com/rehmmann";
+    };
+    const handleLinkedInIcon = () => {
+      window.location.href = "https://linkedin.com/in/rehman-sajid";
+    };
     return (
       <div>
         <Toolbar
@@ -126,8 +127,8 @@ export default function Header() {
           <Typography className={titles}>
             Software Engineer | Data Analyst
           </Typography>
-          <GitHubIcon className={icons} onClick={handleGitHubIcon}/>
-          <LinkedInIcon className={icons} onClick={handleLinkedInIcon}/>
+          <GitHubIcon className={icons} onClick={handleGitHubIcon} />
+          <LinkedInIcon className={icons} onClick={handleLinkedInIcon} />
         </Container>
       </div>
     );

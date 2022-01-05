@@ -152,12 +152,6 @@ function Projects() {
             </Typography> */}
             <Slider
               dots={true}
-              // autoplaySpeed={2000}
-              // autoplay={true}
-              // arrows={true}
-              // pauseOnHover={true}
-              // speed={500}
-              // slidesToShow={3}
               // slidesToScroll={2}
               // focusOnSelect={true}
             >

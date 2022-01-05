@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Cards from "./Cards";
 import "typeface-roboto";
@@ -11,9 +10,9 @@ import {
   Divider,
   Typography,
 } from "@material-ui/core";
-import { blue } from "@material-ui/core/colors";
 import Image from "../greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -66,8 +65,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FF5C5C",
     color: "#fff",
     "&:hover": {
-      backgroundColor: "#000",
-      color: "#fff",
+      backgroundColor: "#FF5C5C",
+      // color: "#fff",
+      transform: "scale(1.05)",
+      transitionDuration: 2
     },
   },
   modulesContainer: {

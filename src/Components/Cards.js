@@ -12,9 +12,9 @@ const useStyles = makeStyles({
     marginTop: 40,
     marginBottom: 30,
     marginRight: 30,
-    height: 270,
+    height: 250,
     borderRadius: 15,
-    backgroundColor: "#cacfd6",
+    backgroundColor: "#E8EDF4",
     // justifyContent: "center"
    
   },
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     fontSize: 14,
   },
   button: {
-    // color: "#fff",
+    
     "&:hover": {
       backgroundColor: "#000",
       color: "#fff",
@@ -45,7 +45,7 @@ export default function SimpleCard(props) {
         <CardContent>
           <Typography
             className={classes.title}
-            color="textSecondary"
+            color="textPrimary"
             gutterBottom
           >
             {props.title}

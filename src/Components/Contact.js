@@ -37,8 +37,8 @@ const useStyles = makeStyles({
     // marginTop:'3%',
     // backgroundColor: "#FFFFFF",
     "&:hover": {
-      backgroundColor: "#0d2c5a",
-      color: "#fff",
+      transform: "scale(1.05)",
+      transitionDuration: 2
     },
   },
 });
